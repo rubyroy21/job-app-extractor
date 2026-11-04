@@ -1,4 +1,4 @@
-# Job Application Extractor
+# job-app-extractor
 
 This app reads a messy job application (an email, cover letter or chat message) and turns it into clean, structured JSON. It uses Google Gemini to read the text, and code checks to make sure the AI never invents information.
 
