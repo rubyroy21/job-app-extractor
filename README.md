@@ -120,6 +120,10 @@ npm run dev --prefix frontend
 
 Then open http://localhost:5173.
 
+### Deploy (live URL)
+
+The app deploys to [Render](https://render.com) as one web service using `render.yaml`. Render builds the React page, and FastAPI serves both the page and the API. Set `GEMINI_API_KEY` in Render's environment settings.
+
 ---
 
 ## 7. Testing and Results

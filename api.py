@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from extractor import extract
@@ -46,3 +47,9 @@ def extract_details(request: ExtractRequest):
             status_code=502,
             detail="We couldn't read that message just now. Please try again in a minute.",
         ) from error
+
+
+# In production, serve the built React page from the same server.
+frontend_dist = Path(__file__).parent / "frontend" / "dist"
+if frontend_dist.is_dir():
+    app.mount("/", StaticFiles(directory=frontend_dist, html=True), name="frontend")
