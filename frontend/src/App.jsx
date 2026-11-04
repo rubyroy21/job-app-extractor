@@ -193,8 +193,16 @@ export default function App() {
     <div className="page">
       <header className="hero">
         <div className="hero-inner">
-          <h1>Job Application Extractor</h1>
-          <p>Turn any applicant's message into clean, structured JSON in seconds.</p>
+          <div>
+            <p className="eyebrow">AI-powered extraction</p>
+            <h1>Job Application Extractor</h1>
+            <p className="tagline">Turn any applicant's message into clean, structured JSON in seconds.</p>
+          </div>
+          <ul className="badges" aria-label="How it works">
+            <li>Gemini</li>
+            <li>JSON Schema</li>
+            <li>No guessing</li>
+          </ul>
         </div>
       </header>
 
